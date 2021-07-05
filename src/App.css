@@ -1,13 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@200;300&display=swap');
 
-
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Roboto, arial, sans-serif
 }
 a{
   text-decoration: inherit;
   color: inherit;
+}
+.App{
+  min-height: 100vh;
+  background:#489CF7;
+}
+.Generator-Container{
+  width: 350px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+.Generator-Container__Content{
+  background: #0B0F2F;
+  border-radius: 8px;
+  padding: 20px;
+}
+.Generator-Header__Title{
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.Generator-Password__Wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1E223F;
+  padding: 13px 10px;
+  margin-bottom: 22px;
+  color: #fff;
+  height: 55px;
+  border-radius: 8px;
+  
+}
+.Generator-Setting__box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1E223F;
+  padding: 13px 10px;
+  margin-bottom: 8px;
+  color: #fff;
+  height: 55px;
+  border-radius: 8px;
+}
+.Password-Coppy__btn{
+  background: #1E223F;
+  color: #fff;
+  border: none; 
+  padding: 10px;
+  cursor: pointer;
+  
+}
+.Generator-Password__btn{
+  background: #6F55A6;
+  border:none;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 22px;
+}
+.Generator-Password__Length{
+  margin-bottom: 22px;
 }

@@ -10,11 +10,11 @@ function App() {
           <div className="Generator-Password__Wrapper">
             <h3 className="Password-Wrapper__Title">Password</h3>
             <button className="Password-Coppy__btn">
-              <i className='far fa-clipboard'></i>
+              <i className='far fa-copy'></i>
             </button>
           </div>
 
-          <div className="Generator-tool__box">
+          <div className="Generator-Setting__box Generator-Password__Length">
             <label htmlFor="password-strength">Password strength</label>
             <input
               type='number'
@@ -25,7 +25,7 @@ function App() {
             />
           </div>
 
-          <div className='Generator-tool__box'>
+          <div className='Generator-Setting__box'>
             <label htmlFor='uppercase-letters'>Include Uppercase </label>
             <input
               type='checkbox'
@@ -34,7 +34,7 @@ function App() {
             />
           </div>
 
-          <div className='Generator-tool__box'>
+          <div className='Generator-Setting__box'>
             <label htmlFor='lowercase-letters'>Include Lowercase</label>
             <input
               type='checkbox'
@@ -43,7 +43,7 @@ function App() {
             />
           </div>
 
-          <div className='Generator-tool__box'>
+          <div className='Generator-Setting__box'>
             <label htmlFor='include-numbers'>Include Numbers</label>
             <input
               type='checkbox'
@@ -52,7 +52,7 @@ function App() {
             />
           </div>
 
-          <div className='Generator-tool__box'>
+          <div className='Generator-Setting__box'>
             <label htmlFor='include-symbols'>Include Symbols</label>
             <input
               type='checkbox'
@@ -60,7 +60,7 @@ function App() {
               name='include-symbols'
             />
           </div>
-          <button className="Generator-Password__btn">Generate Password</button>
+          <button className="Generator-Password__btn">GENERATE PASSWORD</button>
 
         </div>
       </div>  
