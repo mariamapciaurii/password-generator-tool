@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/password-generator-tool/static/css/main.a617e044.chunk.css",
+    "main.js": "/password-generator-tool/static/js/main.f7d73c2a.chunk.js",
+    "main.js.map": "/password-generator-tool/static/js/main.f7d73c2a.chunk.js.map",
+    "runtime-main.js": "/password-generator-tool/static/js/runtime-main.20ccc81e.js",
+    "runtime-main.js.map": "/password-generator-tool/static/js/runtime-main.20ccc81e.js.map",
+    "static/js/2.451debdf.chunk.js": "/password-generator-tool/static/js/2.451debdf.chunk.js",
+    "static/js/2.451debdf.chunk.js.map": "/password-generator-tool/static/js/2.451debdf.chunk.js.map",
+    "static/js/3.6fc3dfb7.chunk.js": "/password-generator-tool/static/js/3.6fc3dfb7.chunk.js",
+    "static/js/3.6fc3dfb7.chunk.js.map": "/password-generator-tool/static/js/3.6fc3dfb7.chunk.js.map",
+    "index.html": "/password-generator-tool/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/password-generator-tool/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.451debdf.chunk.js.LICENSE.txt": "/password-generator-tool/static/js/2.451debdf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.20ccc81e.js",
+    "static/js/2.451debdf.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.f7d73c2a.chunk.js"
+  ]
+}
