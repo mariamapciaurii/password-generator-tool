@@ -37,6 +37,19 @@ function App() {
     }
     return password;
   }
+  const copyToClipboard = () => {
+    const newTextArea = document.createElement('textarea')
+    newTextArea.innerText = password
+    document.body.appendChild(newTextArea)
+    newTextArea.select()
+    document.execCommand('copy')
+    newTextArea.remove()
+  }
+
+  const copyPassword = (e) => {
+      copyToClipboard()
+  
+  }
 
   return (
     <div className="App">
@@ -45,7 +58,7 @@ function App() {
           <h2 className="Generator-Header__Title">Password Generator</h2>
           <div className="Generator-Password__Wrapper">
             <h3 className="Password-Wrapper__Title">{password}</h3>
-            <button className="Password-Coppy__btn">
+            <button onClick={copyPassword} className="Password-Coppy__btn">
               <i className='far fa-copy'></i>
             </button>
           </div>
