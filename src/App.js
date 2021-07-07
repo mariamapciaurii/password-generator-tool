@@ -1,5 +1,6 @@
 import React , {useState} from 'react' ;
 import './App.css';
+import{ numbers, upperCaseLetters, lowerCaseLetters, specialCharacters} from './characters';
 
 function App() {
   const [password, setPassword] = useState('')
@@ -8,6 +9,34 @@ function App() {
   const [includeLowercase, setIncludeLowercase] = useState(false)
   const [includeNumbers, setIncludeNumbers] = useState(false)
   const [includeSymbols, setIncludeSymbols] = useState(false)
+
+  const generatePassword = (e) =>{
+    let characterList = '';
+
+    if (includeLowercase){
+      characterList = characterList + lowerCaseLetters
+    };
+    if (includeUppercase) {
+      characterList = characterList + upperCaseLetters
+    };
+    if (includeNumbers) {
+      characterList = characterList + numbers
+    };
+    if (includeSymbols) {
+      characterList = characterList + specialCharacters
+    };
+    setPassword(createPassword(characterList));
+  }
+
+  const createPassword = (characterList) => {
+    let password = '';
+    const characterListLength = characterList.length;
+    for (let i = 0; i < passwordLength; i++){
+      const characterIndex = Math.round(Math.random() * characterListLength);
+      password = password + characterList.charAt(characterIndex);
+    }
+    return password;
+  }
 
   return (
     <div className="App">
@@ -77,7 +106,7 @@ function App() {
               name='include-symbols'
             />
           </div>
-          <button className="Generator-Password__btn">GENERATE PASSWORD</button>
+          <button onClick={generatePassword} className="Generator-Password__btn">GENERATE PASSWORD</button>
 
         </div>
       </div>  
