@@ -18,19 +18,14 @@ a{
 .Generator-Container{
   width: 350px;
   margin: 0 auto;
-  padding-top: 80px;
-}
-@media only screen and (max-width: 600px) {
-  .Generator-Container {
-    padding-top: 42px;   
-  }
-}
-@media only screen and (max-width: 812px) {
-  .Generator-Container {
-    padding-top: 110px;   
-  }
+  padding-top: 90px;
 }
 
+@media only screen and (max-width: 812px){
+  .Generator-Container {
+    justify-content: center;
+  }
+}
 .Generator-Container__Content{
   background: #0B0F2F;
   border-radius: 8px;
@@ -51,7 +46,9 @@ a{
   color: #fff;
   height: 55px;
   border-radius: 8px;
-  
+}
+.Password-Wrapper__Title{
+  font-size: 18px;
 }
 .Generator-Setting__box{
   display: flex;
@@ -60,7 +57,7 @@ a{
   background: #1E223F;
   padding: 13px 10px;
   margin-bottom: 8px;
-  color: #fff;
+  color: #d8dae2;
   height: 55px;
   border-radius: 8px;
 }
@@ -70,19 +67,26 @@ a{
   border: none; 
   padding: 10px;
   cursor: pointer;
-  
+  border: 2px solid #321b64;
+  border-radius: 8px;
 }
 .Generator-Password__btn{
-  background: #6F55A6;
-  border:none;
+  background: #0B0F2F;
+  border: 2px solid #321b64;
   border-radius: 8px;
   display: block;
   width: 100%;
   padding: 10px;
   color: #fff;
+  font-weight: bold;
   font-size: 16px;
   cursor: pointer;
   margin-top: 22px;
+}
+.Generator-Password__btn:hover,
+.Password-Coppy__btn:hover{
+  background: #321b64;
+  transition: 0.6s;
 }
 .Generator-Password__Length{
   margin-bottom: 22px;

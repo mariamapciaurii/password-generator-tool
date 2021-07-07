@@ -1,16 +1,27 @@
 import React , {useState} from 'react' ;
 import './App.css';
 import{ numbers, upperCaseLetters, lowerCaseLetters, specialCharacters} from './characters';
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { COPY_SUCCESS } from './message'
 
 function App() {
   const [password, setPassword] = useState('')
-  const [passwordLength, setPasswordLength] = useState(32)
+  const [passwordLength, setPasswordLength] = useState(20)
   const [includeUppercase, setIncludeUppercase] = useState(false)
   const [includeLowercase, setIncludeLowercase] = useState(false)
   const [includeNumbers, setIncludeNumbers] = useState(false)
   const [includeSymbols, setIncludeSymbols] = useState(false)
 
   const generatePassword = (e) =>{
+    if (
+      !includeUppercase &&
+      !includeLowercase &&
+      !includeNumbers &&
+      !includeSymbols
+    ) {
+      notify('You must Select at least one option', true)
+    }
     let characterList = '';
 
     if (includeLowercase){
@@ -46,9 +57,37 @@ function App() {
     newTextArea.remove()
   }
 
+  const notify = (message, hasError = false) => {
+    if (hasError) {
+      toast.error(message, {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    } else {
+      toast(message, {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    }
+  }
+
   const copyPassword = (e) => {
+    if (password === '') {
+      notify('Nothing To Copy', true)
+    } else {
       copyToClipboard()
-  
+      notify(COPY_SUCCESS)
+    }
   }
 
   return (
@@ -65,14 +104,15 @@ function App() {
 
           <div className="Generator-Setting__box Generator-Password__Length">
             <label htmlFor="password-strength">Password Lenght</label>
-            <input
+            <input className="Password-Input__Lenght"
               defaultValue={passwordLength}
               onChange={(e) => setPasswordLength(e.target.value)}
               type ='number'
               id='password-strength'
               name='password-strength'
-              max='32'
+              max='20'
               min='4'
+              
             />
           </div>
 
@@ -120,6 +160,17 @@ function App() {
             />
           </div>
           <button onClick={generatePassword} className="Generator-Password__btn">GENERATE PASSWORD</button>
+          <ToastContainer
+            position='top-center'
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
 
         </div>
       </div>  
@@ -128,3 +179,4 @@ function App() {
 }
 
 export default App;
+
